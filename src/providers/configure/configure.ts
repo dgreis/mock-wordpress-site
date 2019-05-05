@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 export class Configure {
 
 	// replace with your WordPress site URL. Must be HTTPS for production.
-	url: string = 'https://appdev.local/'
+	url: string = 'https://10.0.2.2/wordpress/'
 
 	constructor(public http: HttpClient) {
 	}
@@ -20,7 +20,7 @@ export class Configure {
 	 * Must use HTTPS for basic auth.
 	 */
 	getAuth() {
-		return 'Basic Y2tfZWUwMTBhOWQyOWYxN2Y5NjM4ZDViYjJhZWFhNDMyYzM4N2FmNTJiZTpjc18xMjM5MmYyYmVhMzlhYjZlYTM4NWExYWVmZWFjYzIyNDdkMTcxNjdm';
+		return 'Basic Y2tfYmNkOThlNTAwN2FmNjE4MTNmMTg2YTUxYmI3ZmU5NmVmMzEyZjM2MDpjc182ZGRlMzNmMzA0YWFkOGZkMTFjNjAwODYwYzRiMjQyMzljYzdjNTI5';
 	}
 
 }
