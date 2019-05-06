@@ -256,6 +256,7 @@ dependencies {
     // SUB-PROJECT DEPENDENCIES START
     compile project(':CordovaLib')
     compile "com.android.support:support-v4:24.1.1+"
+    compile 'com.google.android.gms:play-services-tagmanager:11.6.0'
     // SUB-PROJECT DEPENDENCIES END
 }
 
