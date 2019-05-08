@@ -22,6 +22,7 @@ apply plugin: 'com.android.application'
 buildscript {
     repositories {
         jcenter()
+        maven { url 'https://maven.fabric.io/public' } // Fabrics Maven repository from cordova-plugin-firebase
         maven {
             url "https://maven.google.com"
         }
@@ -33,15 +34,16 @@ buildscript {
     // and https://issues.apache.org/jira/browse/CB-8143
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.0'
-        classpath 'com.google.gms:google-services:4.0.1'
+        classpath 'com.google.gms:google-services:4.0.1' // google-services dependency from cordova-plugin-firebase
+        classpath 'io.fabric.tools:gradle:1.25.4' // fabric dependency from cordova-plugin-firebase
     }
 }
 
 // Allow plugins to declare Maven dependencies via build-extras.gradle.
 allprojects {
     repositories {
-        google()
         jcenter()
+        google() // Google's Maven repository from cordova-plugin-firebase
         maven {
             url "https://maven.google.com"
         }
@@ -94,6 +96,7 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
+apply from: "cordova-plugin-firebase/app-build.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -252,11 +255,14 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
-    implementation 'com.google.firebase:firebase-core:16.0.1'
     // SUB-PROJECT DEPENDENCIES START
     compile project(':CordovaLib')
     compile "com.android.support:support-v4:24.1.1+"
-    compile 'com.google.android.gms:play-services-tagmanager:11.6.0'
+    compile "com.google.android.gms:play-services-tagmanager:11.6.0"
+    compile "com.google.firebase:firebase-core:16.0.8"
+    compile "com.google.firebase:firebase-messaging:17.5.0"
+    compile "com.google.firebase:firebase-config:16.4.1"
+    compile "com.google.firebase:firebase-perf:16.2.4"
     // SUB-PROJECT DEPENDENCIES END
 }
 
@@ -319,5 +325,3 @@ for (def func : cdvPluginPostBuildExtras) {
 if (hasProperty('postBuildExtras')) {
     postBuildExtras()
 }
-
-apply plugin: 'com.google.gms.google-services'
