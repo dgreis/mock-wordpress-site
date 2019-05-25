@@ -12,6 +12,20 @@ function mytheme_add_woocommerce_support() {
 }
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
+//Here is the code in the widget for future reference:
+/*
+<div id='hidden-coupon'>
+<?php
+
+$coupon_code = generateRandomString();
+createDBCoupon($coupon_code);
+echo $coupon_code;
+
+echo "<script>dataLayer.push({'coupon_code': '$coupon_code' });</script>";
+
+?>
+</div>
+*/
 
 function generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -22,8 +36,6 @@ function generateRandomString($length = 10) {
     }
     return $randomString;
 }
-
-//$coupon_code = generateRandomString();
 
 function createDBCoupon($coupon_code){
 	/**
