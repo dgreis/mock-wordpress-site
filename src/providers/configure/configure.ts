@@ -20,7 +20,7 @@ export class Configure {
 	 * Must use HTTPS for basic auth.
 	 */
 	getAuth() {
-		return 'Basic Y2tfYmNkOThlNTAwN2FmNjE4MTNmMTg2YTUxYmI3ZmU5NmVmMzEyZjM2MDpjc182ZGRlMzNmMzA0YWFkOGZkMTFjNjAwODYwYzRiMjQyMzljYzdjNTI5';
+		return 'Basic Y2tfZGI2MzBjMjI2MGQ3MTY2MWU2OGVkN2M0OTQwZWU5OWZlM2Y3ZDA4YTpjc182MDNjZDQ5YmI3NzdiNmEzMTg5Mjk1ODlkNWFjY2NhZWEzOGI0Njdl';
 	}
 
 }
