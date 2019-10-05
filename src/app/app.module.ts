@@ -16,6 +16,7 @@ import { WooProvider } from '../providers/woo/woo';
 import { NgxStripeModule } from 'ngx-stripe';
 import { Configure } from '../providers/configure/configure';
 import { EventLoggerProvider } from '../providers/event-logger/event-logger';
+import { FirebaseAnalytics } from '@ionic-native/firebase-analytics';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { EventLoggerProvider } from '../providers/event-logger/event-logger';
     PostsProvider,
     WooProvider,
     Configure,
-    EventLoggerProvider
+    EventLoggerProvider,
+    FirebaseAnalytics
   ]
 })
 export class AppModule {}
