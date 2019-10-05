@@ -15,6 +15,7 @@ import { WooProvider } from '../providers/woo/woo';
 
 import { NgxStripeModule } from 'ngx-stripe';
 import { Configure } from '../providers/configure/configure';
+import { EventLoggerProvider } from '../providers/event-logger/event-logger';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { Configure } from '../providers/configure/configure';
     CameraProvider,
     PostsProvider,
     WooProvider,
-    Configure
+    Configure,
+    EventLoggerProvider
   ]
 })
 export class AppModule {}

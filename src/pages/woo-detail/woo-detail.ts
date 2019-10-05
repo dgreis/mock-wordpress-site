@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ToastController, ModalController, 
 import { DomSanitizer } from '@angular/platform-browser';
 import { Storage } from '@ionic/storage';
 import { WooProvider } from '../../providers/woo/woo';
+import { EventLoggerProvider } from '../../providers/event-logger/event-logger';
 
 @IonicPage()
 @Component({
@@ -26,7 +27,8 @@ export class WooDetailPage {
 		public toastCtrl: ToastController,
 		public modalCtrl: ModalController,
 		public wooProvider: WooProvider,
-		public events: Events
+		public events: Events,
+		public logger: EventLoggerProvider
 		) {
 
 		this.loadProduct()
@@ -84,6 +86,7 @@ export class WooDetailPage {
 			this.cart_count++
 			this.events.publish( 'add_to_cart', item )
 
+			this.logger.FBlogEvent('fb_add_to_cart', {test: 'value'} )
 			this.productAddSuccess( data, item )
 
 		})
