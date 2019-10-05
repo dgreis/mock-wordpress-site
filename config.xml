@@ -19,6 +19,7 @@
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
+    <engine name="android" spec="8.1.0" />
     <platform name="android">
         <allow-intent href="market:*" />
         <hook type="before_build" src="copy_build_extra.js" />
