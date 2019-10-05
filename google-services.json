@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "946968842006",
+    "firebase_url": "https://greis-wp-ecom.firebaseio.com",
+    "project_id": "greis-wp-ecom",
+    "storage_bucket": "greis-wp-ecom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946968842006:android:7d463d33a5e5d8c1",
+        "android_client_info": {
+          "package_name": "com.wpionic.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946968842006-ifu6tdoe88ts9qum4ma7rtju3tn4khpa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7BGQz2-ftUBPXxeAq6o9bLj7GFRK1_Ws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946968842006-ifu6tdoe88ts9qum4ma7rtju3tn4khpa.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "946968842006-shhb4ljbaa3nhu1v0c7rvs2fc893ise4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.wpIonic.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
