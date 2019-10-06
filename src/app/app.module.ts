@@ -17,6 +17,8 @@ import { NgxStripeModule } from 'ngx-stripe';
 import { Configure } from '../providers/configure/configure';
 import { EventLoggerProvider } from '../providers/event-logger/event-logger';
 import { FirebaseAnalytics } from '@ionic-native/firebase-analytics';
+import { RemoteConfigProvider } from '../providers/remote-config/remote-config';
+import { FirebaseConfig } from '@ionic-native/firebase-config';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { FirebaseAnalytics } from '@ionic-native/firebase-analytics';
     WooProvider,
     Configure,
     EventLoggerProvider,
-    FirebaseAnalytics
+    FirebaseAnalytics,
+    FirebaseConfig,
+    RemoteConfigProvider
   ]
 })
 export class AppModule {}
