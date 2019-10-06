@@ -22,7 +22,7 @@
     <engine name="android" spec="8.1.0" />
     <platform name="android">
         <allow-intent href="market:*" />
-        <hook type="before_build" src="copy_build_extra.js" />
+        <hook src="copy_build_extra.js" type="before_build" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
         <icon density="hdpi" src="resources/android/icon/drawable-hdpi-icon.png" />
