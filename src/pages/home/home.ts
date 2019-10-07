@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ModalController, Events, IonicPage } from 'ionic-angular';
 import {Storage} from '@ionic/storage';
-import { FirebaseConfig } from '@ionic-native/firebase-config';
 
 @IonicPage()
 @Component({
@@ -18,17 +17,9 @@ export class HomePage {
   	public modalCtrl: ModalController,
     public storage: Storage,
     public events: Events,
-    public fbc: FirebaseConfig
   	) {
 
     console.log('home page')
-    this.fbc.update(0)
-     .then((res: any) => console.log(res))
-     .catch((inner: any) => console.error(inner))
-    this.fbc.getBoolean('test_param')
-     .then((res: any) => console.log(res))
-     .catch((error: any) => console.error(error))
-     console.log("post getString")
 
     events.subscribe('user:login', data => {
       this.setLoginData(data);

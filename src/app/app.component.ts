@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, Nav, MenuController, ModalController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { FirebaseConfig } from '@ionic-native/firebase-config';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -19,7 +20,8 @@ export class MyApp {
     statusBar: StatusBar, 
     splashScreen: SplashScreen,
     public menu: MenuController,
-    public modalCtrl: ModalController
+    public modalCtrl: ModalController,
+    public fbc: FirebaseConfig
     ) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -36,6 +38,21 @@ export class MyApp {
     this.menus = [{ title: 'Home', slug: 'HomePage', icon: 'home' },{ title: 'Shop', slug: 'WooListPage', icon: 'basket' },{ title: 'Posts', slug: 'PostListPage', icon: 'list' },{ title: 'Contact', slug: 'ContactPage', icon: 'mail' }]
 
     this.nav.setRoot( TabsPage )
+    
+    this.fbc.update(0)
+    .then((res: any) => console.log(res))
+    .catch((inner: any) => console.error(inner))
+   this.fbc.getBoolean('test_param')
+     .then(function(value) {
+       if (value == true) {
+       document.documentElement.style.setProperty(`--main-color`, '#f10808');
+       }
+       else{
+         console.log("I'm here, bitches!!")
+       }
+    })
+    .catch((error: any) => console.error(error))
+    console.log("post getString")
   }
 
   menuLink( item ) {

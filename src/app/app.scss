@@ -15,8 +15,13 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+:root {
+	--main-color: #333;
+  }
+  
 .toolbar-background {
-	background: #333;
+	//background: #333;
+	background: var(--main-color);
 }
 
 .toolbar, .toolbar-title, .toolbar ion-icon {
